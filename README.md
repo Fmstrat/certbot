@@ -12,14 +12,14 @@ This fork of `certbot` is intended to be a docker container that makes it easy f
 This assumes:
 
 - Your domain is `example.com`
-- The host you run Easywildcard on is `mydynamichost.example.com`
+- The host you run Easywildcard on is `mydynamichost.anyplace.com`
 - `mydynamichost.example.com` uses Dynamic DNS to stay updated
 
 To get things going, create the following DNS records:
 
-- `acme-dns.example.com` that is a `CNAME` to `mydymanichost.example.com` (or an `A` record to a static IP)
-- `acme-challenge.example.com` that is an `NS` type with an answer of `acme-dns.exmaple.com`
-- `_acme-challenge.example.com` that is a `CNAME` to `acme-challenge.exmple.com`
+- `acme-dns.example.com` that is a `CNAME` to `mydymanichost.anyplace.com` (or an `A` record to a static IP)
+- `acme-challenge.example.com` that is an `NS` type with an answer of `acme-dns.example.com`
+- `_acme-challenge.example.com` that is a `CNAME` to `acme-challenge.example.com`
 
 That's it!
 
