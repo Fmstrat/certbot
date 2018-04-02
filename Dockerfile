@@ -1,6 +1,6 @@
 FROM python:2-alpine
 
-ENTRYPOINT [ "certbot" ]
+ENTRYPOINT [ "/getcert.sh" ]
 EXPOSE 80 443
 VOLUME /etc/letsencrypt /var/lib/letsencrypt
 WORKDIR /opt/certbot
@@ -25,3 +25,8 @@ RUN apk add --no-cache --virtual .build-deps \
         --editable /opt/certbot/src/acme \
         --editable /opt/certbot/src \
     && apk del .build-deps
+
+COPY easywildcard/hooks /hooks
+COPY easywildcard/getcert.sh /getcert.sh
+RUN apk --update add bind
+EXPOSE 53
