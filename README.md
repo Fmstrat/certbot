@@ -7,7 +7,7 @@ This fork of `certbot` is intended to be a docker container that makes it easy f
 - Easywildcard fires up `certbot` and `bind` to handle the requests
 
 
-##Setting up your DNS
+## Setting up your DNS
 
 This assumes:
 
@@ -24,13 +24,13 @@ To get things going, create the following DNS records:
 That's it!
 
 
-##Setting up the machine to run Easywildcard
+## Setting up the machine to run Easywildcard
 
 - Make sure your Dynamic DNS provider is set up so your IP always has a static hostname (or use a provider with a static IP)
 - Make sure you forward port `53` externally to port `5053` on the local machine (or whatever port is specified below)
 
 
-##Usage
+## Usage
 
 Until this is live on the HUB and documentation is complete, clone and then:
 ```
