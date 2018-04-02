@@ -50,7 +50,7 @@ You can run the above for as many domains as you need SSL certs for.
 
 From then out, to renew, you can do the following in cron:
 ```
-  docker run -p ${PORT}:53/tcp -p ${PORT}:53/udp -v /tmp/letsencrypt/:/etc/letsencrypt --rm -i -e -e "RENEW=1" easywildcard
+  docker run -p ${PORT}:53/tcp -p ${PORT}:53/udp -v /tmp/letsencrypt/:/etc/letsencrypt --rm -i -e "RENEW=1" easywildcard
 ```
 
 You can add certs at any time using the first command. Renew will just pick them up
