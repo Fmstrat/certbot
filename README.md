@@ -1,3 +1,7 @@
+Moved to https://github.com/Fmstrat/easywildcard
+
+
+
 # Easywildcard - Easy wildcard certs from Let's Encrypt
 
 This fork of `certbot` is intended to be a docker container that makes it easy for anyone to get a wildcard SSL certificate. The way it works is:
